@@ -1,18 +1,32 @@
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+import { NextSeo } from 'next-seo';
 import Row from '../components/row';
 
 export default function Home() {
   return (
     <div className="px-6 lg:px-0 container mx-auto">
+      <NextSeo
+        title="#BLACKLIVESMATTER"
+        description="Unarmed African-Americans killed by police"
+        openGraph={{
+          title: '#BLACKLIVESMATTER',
+          description: 'Unarmed African-Americans killed by the police',
+        }}
+        twitter={{
+          handle: '@deebovv',
+          site: '@deebovv',
+          cardType: 'summary_large_image',
+        }}
+      />
       <Head>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16" />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-        <title>#BLACKLIVESMATTER</title>
+        <meta property="og:image" content="/demo.png" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <motion.div
