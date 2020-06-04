@@ -1,0 +1,13 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  background-color: black;
+  color: white;
+}
+
+*::selection {
+  color: white;
+  background: #ff443b;
+}
