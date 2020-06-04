@@ -1,10 +1,34 @@
 import React from 'react';
+import Head from 'next/head';
 import { motion } from 'framer-motion';
 import Row from '../components/row';
 
 export default function Home() {
   return (
     <div className="px-6 lg:px-0 container mx-auto">
+      <Head>
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <title>#BLACKLIVESMATTER</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <motion.div
         initial={{ scale: 0.9, opacity: 0 }}
         transition={{ delay: 0.3, ease: 'easeInOut', duration: 0.8 }}
@@ -21,16 +45,15 @@ export default function Home() {
       </h1>
 
       <Row position="right" name="GEORGE FLOYD" img="/edited/george_floyd.png">
-        George Floyd, a part-time bouncer in Minneapolis, was purchasing a pack
-        of cigarettes at a grocery store when the clerk raised concern that the
-        $20 US bill he was using was counterfeit. When Floyd refused to give up
-        the cigarettes, the clerk called police. Not long after officers arrived
-        to speak to Floyd, they put him in handcuffs. They seemed to struggle
-        trying to put Floyd in the squad car. Cellphone footage captured when
-        one of the officers, Derek Chauvin, kept his knee on Floyd's neck while
-        on top of him on the ground for nearly nine minutes, while three other
-        officers stood by. Floyd, who repeatedly said he couldn't breathe,
-        became unresponsive and was pronounced dead in hospital an hour later.
+        George Floyd, a 46-year-old black man suspected of passing a counterfeit
+        $20 bill, died in Minneapolis, Minnesota after Derek Chauvin, a white
+        police officer, pressed his knee to Floyd's neck for almost nine minutes
+        while Floyd was handcuffed face down in the street; two other officers
+        further restrained Floyd while a fourth prevented onlookers from
+        intervening. During the final three minutes Floyd was motionless and had
+        no pulse, but officers made no attempt to revive him and Chauvin kept
+        his knee on Floyd's neck even as arriving emergency medical technicians
+        attempted to treat him.
       </Row>
 
       <Row name="BREONNA TAYLOR" img="/edited/breonna_taylor.png">
@@ -54,26 +77,12 @@ export default function Home() {
         unarmed when shot and was transported to McKeesport Hospital where he
         was later declared deceased.
       </Row>
-      <Row name="BOTHAM JEAN" img="/edited">
+      <Row position="right" name="BOTHAM JEAN" img="/edited/botham_jean.png">
         On Sept. 6, 2018, Amber Guyger, an off-duty officer with the Dallas
         Police Department, walked into the apartment of Botham Jean and fatally
         shot him.
       </Row>
-      <Row
-        position="right"
-        name="PHILANDO CASTILE"
-        img="/edited/philando_castile.png"
-      >
-        Philando Castile, 32, was driving with his girlfriend, Diamond Reynolds,
-        and her four-year-old daughter when their car was pulled over by police
-        in a suburb of St. Paul, Minn. One officer, Jeronimo Yanez, came over to
-        the driver's side to tell Castile his brake lights were out and asked
-        for his driver's licence and insurance. The other officer stood a ways
-        back. During their exchange, Castile informed Yanez that he was carrying
-        a gun legally. Yanez appeared to panic as Castile reached for his wallet
-        and the officer shot seven times, hitting Castile with five bullets.
-        Castile died in hospital 20 minutes later.
-      </Row>
+
       <Row name="ALTON STERLING" img="/edited/alton_sterling.png">
         Alton Sterling was selling DVDs outside of a convenience store in Baton
         Rouge, La. As he was packing up his things, Sterling was confronted by a
@@ -169,6 +178,21 @@ export default function Home() {
         when police approached him. Police shot Lamontez multiple times,
         claiming he aimed a gun at them. Police later revealed that the gun was
         a toy.
+      </Row>
+      <Row
+        position="right"
+        name="PHILANDO CASTILE"
+        img="/edited/philando_castile.png"
+      >
+        Philando Castile, 32, was driving with his girlfriend, Diamond Reynolds,
+        and her four-year-old daughter when their car was pulled over by police
+        in a suburb of St. Paul, Minn. One officer, Jeronimo Yanez, came over to
+        the driver's side to tell Castile his brake lights were out and asked
+        for his driver's licence and insurance. The other officer stood a ways
+        back. During their exchange, Castile informed Yanez that he was carrying
+        a gun legally. Yanez appeared to panic as Castile reached for his wallet
+        and the officer shot seven times, hitting Castile with five bullets.
+        Castile died in hospital 20 minutes later.
       </Row>
 
       {/* FOOTER */}
