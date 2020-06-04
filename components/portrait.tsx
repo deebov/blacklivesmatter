@@ -13,6 +13,7 @@ const variants = {
 
 interface Props {
   position?: string;
+  altText?: string;
   img: string;
 }
 
@@ -26,7 +27,11 @@ const Portrait: React.FC<Props> = (props) => (
   >
     {({ isVisible }) => (
       <motion.div className="lg:w-500 overflow-hidden relative h-full">
-        <img className="lg:w-500" src={props.img} />
+        <picture>
+          <source srcSet={`/optimized/${props.img}.webp`} type="image/webp" />
+          <source srcSet={`optimized/png/${props.img}.png`} type="image/jpeg" />
+          <img src={`optimized/png/${props.img}.png`} alt={props.altText} />
+        </picture>
         <motion.div
           className="absolute inset-0 w-full h-full bg-black"
           animate={isVisible ? 'hidden' : 'visible'}

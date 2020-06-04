@@ -17,7 +17,11 @@ const Row: React.FC<Props> = (props) => (
   >
     {({ isVisible }) => (
       <>
-        <Portrait img={props.img} position={props.position} />
+        <Portrait
+          altText={props.name}
+          img={props.img}
+          position={props.position}
+        />
         <div
           className={`order-last lg:order-1 ${
             props.position !== 'right' ? 'text-right' : ''
