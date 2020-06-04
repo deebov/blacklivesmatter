@@ -13,6 +13,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-on-screen": "^2.1.1",
+    "tailwindcss": "^1.4.6",
     "wow.js": "^1.2.2"
   },
   "devDependencies": {
